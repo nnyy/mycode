@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+#wizard {
+	border: 1px solid #789;
+	font-size: 12px;
+	height: 700px;
+	margin: 20px auto;
+	width: 900px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 2px;
+}
+
+#wizard .items {
+	width: 20000px;
+	clear: both;
+	position: absolute;
+}
+
+#wizard .right {
+	float: right;
+}
+
+#wizard #status {
+	height: 35px;
+	background: #F0F0F0;
+	padding-left: 25px !important;
+}
+
+#status li {
+	float: left;
+	color: #483D8B;
+	padding: 10px 30px;
+}
+
+#status li.active {
+	background-color: #369;
+	font-weight: normal;
+}
+
+.input {
+	width: 240px;
+	height: 28px;
+	margin: 10px auto;
+	line-height: 20px;
+	border: 1px solid #e6e6e6;
+	background-color: #fff;
+	padding: 2px;
+	border-radius: 2px;
+}
+
+.page {
+	padding: 20px 30px;
+	width: 850px;
+	float: left;
+}
+
+.page h3 {
+	height: 42px;
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px dotted #ccc;
+	margin-bottom: 20px;
+	padding-bottom: 5px
+}
+
+.page h3 em {
+	font-size: 12px;
+	font-weight: 500;
+	font-style: normal
+}
+
+.page p {
+	line-height: 24px;
+}
+
+.page p label {
+	font-size: 14px;
+	display: block;
+}
+
+.btn_nav {
+	height: 36px;
+	line-height: 36px;
+	margin: 20px auto;
+}
+
+.prev, .next {
+	width: 100px;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid #d3d3d3;
+	cursor: pointer
+}
+
+.maindiv {
+	float: left;
+	width: 900px;
+	height: 480px;
+	margin-bottom: 10px
+}
+
+.div1 {
+	float: left;
+	width: 360px;
+	height: 480px
+}
+
+.div1 select {
+	width: 360px;
+	height: 480px;
+}
+
+.div2 {
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 30px;
+	height: 480px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 180px;
+	padding-right:10px;
+	font-weight: bold;
+	color: #c0c0c0;
+}
+
+.div3 {
+	float: left;
+	margin-left: 5px;
+	width: 360px;
+	height: 480px
+}
+
+.div3 select {
+	width: 360px;
+	height: 480px;
+}
+
+.abtn1 {
+	height: 21px;
+	width: 30px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 20px;
+	padding: 0 11px;
+	background: #D3D3D3;
+	border: 1px #D3D3D3 solid;
+	border-radius: 3px;
+	/*color: #fff;*/
+	display: inline-block;
+	text-decoration: none;
+	font-size: 12px;
+	outline: none;
+}
+
+.abtn2 {
+	height: 21px;
+	width: 30px;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 11px;
+	background: #D3D3D3;
+	border: 1px #D3D3D3 solid;
+	border-radius: 3px;
+	/*color: #fff;*/
+	display: inline-block;
+	text-decoration: none;
+	font-size: 12px;
+	outline: none;
+	margin-top: 20px;
+	vertical-align: middle;
+}

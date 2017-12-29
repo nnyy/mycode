@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="logfilepath" value="${web.rootDir}/logs" />
+		<Property name="filename" value="appeeor.log" />
+		<Property name="logname" value="appinfo.log" />
+	</Properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<ThresholdFilter level="info" onMatch="ACCEPT"
+				onMismatch="DENY" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="infolog" fileName="${logfilepath}/${logname}.log"
+			filePattern="${logfilepath}/$${date:yyyy-MM}/${logname}-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout
+				pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+			<ThresholdFilter level="info" onMatch="ACCEPT"
+				onMismatch="DENY" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="2M" />
+			</Policies>
+			<DefaultRolloverStrategy max="5" />
+		</RollingFile>
+		<RollingFile name="errorlog" fileName="${logfilepath}/${filename}.log"
+			filePattern="${logfilepath}/$${date:yyyy-MM}/${filename}-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout
+				pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+			<ThresholdFilter level="error" onMatch="ACCEPT"
+				onMismatch="DENY" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="2M" />
+			</Policies>
+			<DefaultRolloverStrategy max="5" />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<logger name="log4j.logger.java.sql" level="debug" additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+		<logger name="log4j.logger.java.sql.Connection" level="debug"
+			additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+		<logger name="log4j.logger.java.sql.Statement" level="debug"
+			additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+		<logger name="log4j.logger.java.sql.PreparedStatement" level="debug"
+			additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+		<logger name="log4j.logger.java.sql.ResultSet" level="debug"
+			additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+
+		<Root level="trace">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="errorlog" />
+			<AppenderRef ref="infolog" />
+		</Root>
+	</Loggers>
+</Configuration>

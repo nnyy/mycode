@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* Table Head */
+#rsttable thead th {
+	background-color: rgb(156, 186, 95);
+	color: #fff;
+	border-bottom-width: 0;
+}
+
+/* Column Style */
+#rsttable td {
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+}
+/* Heading and Column Style */
+#rsttable tr, #rsttable th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(156, 186, 95);
+}
+
+/* Padding and font style */
+#rsttable td, #rsttable th {
+	padding: 5px 10px;
+	font-size: 12px;
+	font-family: Verdana;
+	font-weight: bold;
+}
